@@ -3,11 +3,11 @@ import { useState } from "react";
 const App = () => {
   const [editMode, setEditMode] = useState(false);
   const [text, setText] = useState("안녕하세요 ");
-  const [editText, setEditText] = useState("");
+  const [newText, setNewText] = useState("");
 
   const showEdit = () => {
     setEditMode(true);
-    setEditText(text);
+    setNewText(text);
   };
 
   let content = (
@@ -24,7 +24,7 @@ const App = () => {
 
     const cancelEdit = () => {
       setEditMode(false);
-      setText(editText);
+      setText(newText);
     };
 
     content = (
